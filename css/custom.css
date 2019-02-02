@@ -93,6 +93,11 @@ h2 {
     margin-right: auto;
     margin-left: auto;
 }
+.container-custom{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
  .joinimage {
  	 padding-right: 0px!important;
    padding-left: 0px!important;
