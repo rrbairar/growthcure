@@ -93,6 +93,11 @@ h2 {
     margin-right: auto;
     margin-left: auto;
 }
+.container-custom{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
  .joinimage {
  	 padding-right: 0px!important;
    padding-left: 0px!important;
@@ -215,6 +220,32 @@ section {
   color:white;
 }
 @media only screen and (max-width: 600px) {
+  .header_mobile{
+    max-height: 70px !important;
+  }
+  .mobile_navbg{
+    background: #000;
+    margin-top: -7px;
+    border-top: 1px solid #545d67;
+  }
+  .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler:visited{
+    outline: none;
+  }
+  .mobile_navbg li{
+    padding: 10px 18px;
+  }
+  .widthLogo{
+    width: 62% !important;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .alignText{
+    margin-top: -50px !important;
+  }
+  .parallex{
+    height: 550px !important;
+  }
     .card-body {
         padding: 2.7rem;
         height: 340px;
@@ -294,10 +325,17 @@ section {
   }
   .alignCenter {
     text-align: center;
-    margin-top:20px;
+    margin-top: 100px;
   }
 }
-
+@media only screen and (width:414px){
+  .alignText {
+    margin-top: -62px !important;
+}
+.alignCenter{
+    margin-top:125px;
+}
+}
 
 .foot-ceo{
   margin-top: 2px;
@@ -469,7 +507,7 @@ a.social.linkedin {
 }
 .alignText{
   text-align:right;
-  margin-top:-60px;
+  margin-top:-70px;
 }
 .textAlignToLeft{
   text-align:left;
