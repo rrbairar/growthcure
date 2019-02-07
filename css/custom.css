@@ -325,12 +325,15 @@ section {
   }
   .alignCenter {
     text-align: center;
-    margin-top:150px;
+    margin-top: 100px;
   }
 }
 @media only screen and (width:414px){
   .alignText {
     margin-top: -62px !important;
+}
+.alignCenter{
+    margin-top:125px;
 }
 }
 
