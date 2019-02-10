@@ -236,6 +236,7 @@ section {
 .customa {
   color:white;
 }
+
 @media only screen and (max-width: 600px) {
   .header_mobile{
     max-height: 70px !important;
@@ -243,6 +244,12 @@ section {
   .mobile_navbg{
     background: #545d67;
     border-top: 1px solid #fff;
+  }
+  #navbarSupportedContent{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 75px;
   }
   .scroll_bg{
     background: #545d67;
@@ -363,6 +370,21 @@ section {
   .bottom_cta button{
     width: 100%;
   }
+}
+@media screen and (max-width: 374px) {
+  #navbarSupportedContent{
+    top: 62px;
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 375px){
+  #navbarSupportedContent{
+    top: 75px;
+  }
+}
+@media screen and (min-width: 700px){
+.bottom_cta{
+  display: none;
+}
 }
 @media only screen and (width:414px){
   .alignText {
