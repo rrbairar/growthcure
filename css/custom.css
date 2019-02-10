@@ -236,13 +236,15 @@ section {
 .customa {
   color:white;
 }
-
+.contact_us{
+  padding: 30px 0 !important;
+}
 @media only screen and (max-width: 600px) {
   .header_mobile{
     max-height: 70px !important;
   }
   .mobile_navbg{
-    background: #545d67;
+    background: #000;
     border-top: 1px solid #fff;
   }
   #navbarSupportedContent{
@@ -252,7 +254,7 @@ section {
     top: 75px;
   }
   .scroll_bg{
-    background: #545d67;
+    background: transparent;
   }
   .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler:visited{
     outline: none;
@@ -265,6 +267,10 @@ section {
   }
   .mobile_navbg li a{
     margin: 5px 18px;
+    color: #fff;
+  }
+  #sub_menu .dropdown-menu{
+    background: #000;
   }
   .widthLogo{
     width: 62% !important;
@@ -378,7 +384,7 @@ section {
 }
 @media screen and (max-width: 700px) and (min-width: 375px){
   #navbarSupportedContent{
-    top: 75px;
+    top: 68px;
   }
 }
 @media screen and (min-width: 700px){
