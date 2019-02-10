@@ -625,6 +625,8 @@ function myFunction() {
   }
 }
 //scrolling bottom cta
+if ($(window).width() < 767) {
+  console.log('yes');
 $(document).scroll(function() {
   var topS = $(this).scrollTop();
   if (topS > 250) {
@@ -633,6 +635,7 @@ $(document).scroll(function() {
     $('.bottom_cta').fadeOut();
   }
 });
+}
 
 </script>
 
