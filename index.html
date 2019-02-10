@@ -35,7 +35,7 @@
 
 <style>
 .stickyied {
-  background-color: black !important;
+  background-color: #555e69 !important;
 }
 </style>
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -58,7 +58,7 @@
 
   <nav class="navbar navbar-expand-lg header_mobile" id="myHeader" style="max-height: 60px; background-color: transparent;  position: fixed;top: 0; width: 100%;">
     <div class="container">
-      <div class="row m">
+      <div class="row m scroll_bg">
         <div class="col-lg-8 col-xs-8 col-sm-8 col-md-8">
           <a href="index.html" class="navbar-brand link-scroll"><img class="widthLogo" src="img/logo.png"></a>
         </div>
@@ -69,8 +69,8 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse fontSize mobile_navbg">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="index.html" class="nav-link link-scroll fontColor">Home</a></li>
-          <li class="dropdown">
-            <a href="google-ads.html" class="nav-link link-scroll fontColor" data-toggle="dropdown">Services <b class="caret"></b></a>
+          <li class="dropdown" id="sub_menu">
+            <a href="google-ads.html" class="nav-link link-scroll fontColor" data-toggle="dropdown">Services <span class="fa fa-angle-down pull-right" style="padding-top: 4px;">&nbsp;</span></a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="google-ads.html">Google Ads</a>
               <a class="dropdown-item" href="fb-and-instagram.html">FB & Instagram</a>
@@ -78,7 +78,6 @@
               <a class="dropdown-item" href="lead-generation.html">Lead Generation</a>
               <a class="dropdown-item" href="branding.html">Branding</a>
               <a class="dropdown-item" href="tracking-and-analytics.html">Tracking & Analytics</a>
-              <a class="dropdown-item" href="tracking-and-analytics.html"></a>
             </div>
           </li>
           <li class="nav-item"><a href="portfolio.html" class="nav-link link-scroll fontColor">Portfolio</a></li>
@@ -104,8 +103,8 @@
             </div>
 
           </div>
-          <div class="row" style="padding-top: 30px;">
-            <div class="col-lg-6 col-md-6 mx-auto alignCenter tiltbutton-wrap">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 mx-auto tiltbutton-wrap text-center" style="margin-top: 70px;">
               <button type="button" style="background-color: #3e92cc;" data-target="#exampleModal" data-whatever="@mdo" data-toggle="modal" class="btn btn-primary btn-lg"><span class="customfont">LET'S TALK</span></button>
 <!--             <a class="nectar-button jumbo extra-color-1 tilt instance-1" href="https://niftymarketing.com/contact/" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="visibility: visible;"><span>LET'S TALK</span></a> -->
             </div>
@@ -114,7 +113,10 @@
       </div>
     </section>
     <!-- intro end-->
-
+    <!--Bottom fixed CTA-->
+    <div class="bottom_cta">
+    <button type="button" style="background-color: #3e92cc;" data-target="#exampleModal" data-whatever="@mdo" data-toggle="modal" class="btn btn-primary btn-lg"><span class="customfont">LET'S TALK</span></button>
+    </div>
     <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>-->
     <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>-->
     <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>-->
@@ -540,18 +542,8 @@
     });
     </script>
     <script type="text/javascript">
-  $(function(){
-    $(".dropdown").hover(
-            function() {
-                $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-                //$(this).toggleClass('open');
-                //$('b', this).toggleClass("caret caret-up");
-            },
-            function() {
-                $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-                //$(this).toggleClass('open');
-                //$('b', this).toggleClass("caret caret-up");
-            });
+    $('#sub_menu').click(function(){
+      $('.dropdown-menu').toggle();
     });
     </script>
     <script language="javascript">
@@ -632,6 +624,16 @@ function myFunction() {
     header.classList.remove("stickyied");
   }
 }
+//scrolling bottom cta
+$(document).scroll(function() {
+  var topS = $(this).scrollTop();
+  if (topS > 250) {
+    $('.bottom_cta').fadeIn();
+  } else {
+    $('.bottom_cta').fadeOut();
+  }
+});
+
 </script>
 
   </body>

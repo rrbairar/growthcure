@@ -159,30 +159,58 @@ h2 {
   overflow-y: hidden;
 }
 .textOnImg1{
-  margin-left: -220px;
-  margin-top: 265px;
-  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 100;
   line-height: 0.5;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+.textOnImg1 h3{
+  border: 2px solid #62b7df;
+  padding: 10px 20px;
 }
 .textOnImg2{
-  margin-left: -255px;
-  margin-top: 265px;
-  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 100;
   line-height: 0.5;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+.textOnImg2 h3{
+  border: 2px solid #62b7df;
+  padding: 10px 20px;
 }
 .textOnImg3{
-  margin-left: -295px;
-  margin-top: 267px;
-  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 100;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+.textOnImg3 h3{
+  border: 2px solid #62b7df;
+  padding: 10px 20px;
 }
 .textOnImg4{
-  margin-left: -225px;
-  margin-top: 265px;
-  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 100;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+.textOnImg4 h3{
+  border: 2px solid #62b7df;
+  padding: 10px 20px;
 }
 section {
   padding: 100px 0 !important;
@@ -204,18 +232,7 @@ section {
 .fontSize{
   font-size: 16px!important;
 }
-.aligntextinImg1 {
-  margin-left: -58px;
- }
- .aligntextinImg2 {
-  margin-left: -10px;
- }
- .aligntextinImg3 {
-  margin-left: 35px;
- }
- .aligntextinImg4 {
-  margin-left: -58px;
- }
+
 .customa {
   color:white;
 }
@@ -224,15 +241,23 @@ section {
     max-height: 70px !important;
   }
   .mobile_navbg{
-    background: #000;
-    margin-top: -7px;
-    border-top: 1px solid #545d67;
+    background: #545d67;
+    border-top: 1px solid #fff;
+  }
+  .scroll_bg{
+    background: #545d67;
   }
   .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler:visited{
     outline: none;
   }
-  .mobile_navbg li{
-    padding: 10px 18px;
+  .mobile_navbg ul{
+    padding-bottom: 15px;
+  }
+  .dropdown-item{
+    padding: 10px 0px;
+  }
+  .mobile_navbg li a{
+    margin: 5px 18px;
   }
   .widthLogo{
     width: 62% !important;
@@ -326,6 +351,17 @@ section {
   .alignCenter {
     text-align: center;
     margin-top: 100px;
+  }
+  .bottom_cta{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background: grey;
+  width: 100%;
+  z-index: 1000;
+  }
+  .bottom_cta button{
+    width: 100%;
   }
 }
 @media only screen and (width:414px){
